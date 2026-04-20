@@ -1,0 +1,49 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #DBCDC6;
+}
+
+#Logo {
+    
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+.buttons {
+    border-style: solid;
+    border-color: #465362;
+    border-radius: 15px;
+    
+    margin: 5%;
+    
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+#Question {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5%;
+}
+
+#Option {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5%;
+}
+
+#Question {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5%;
+}
+
+#PlusIcon {
+    size: 50%;
+}
