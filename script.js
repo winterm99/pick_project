@@ -34,12 +34,12 @@ function addAnswer() {
 function removeAnswer(button) {
     const container = document.getElementById("answers");
 
-    // mindestens 2 Optionen 
+    
     if (container.children.length <= 2) {
         alert("At least 2 options are required!");
         return;
     }
 
-    // löscht genau die Option, zu der der Button gehört
+    
     button.parentElement.remove();
 }

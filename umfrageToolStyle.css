@@ -37,13 +37,10 @@
     margin: 5%;
 }
 
-#Question {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 5%;
-}
 
 #PlusIcon {
     size: 50%;
 }
+
+
+
