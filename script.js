@@ -16,9 +16,17 @@ function addAnswer() {
     input.type = "text";
     input.name = "answer";
     input.placeholder = "Answer " + count;
+    
+    const deleteBtn = document.createElement("button");
+    deleteBtn.type = "button";
+    deleteBtn.textContent = "x";
+    deleteBtn.onclick = function() {
+        removeAnswer(deleteBtn);
+    };
 
     div.appendChild(label);
     div.appendChild(input);
+    div.appendChild(deleteBtn);
 
     container.appendChild(div);
 }
