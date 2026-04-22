@@ -1,5 +1,8 @@
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
     background-color: #DBCDC6;
 }
 
@@ -35,30 +38,13 @@
     color: white;
 }
 
-#Question {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 5%;
-}
 
-#Option {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 5%;
-}
-
-
-#PlusIcon {
-    size: 50%;
-}
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 
@@ -68,7 +54,7 @@ form {
     gap: 20px;
 
     width: 320px;
-    padding: 20px;
+    padding: 20px;   /* gleichmäßig oben, rechts, unten, links */
 
     border: 2px solid #465362;
     border-radius: 15px;
@@ -107,4 +93,21 @@ input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
+}
+
+button {
+    padding: 12px;
+    border: 2px solid #465362;
+    border-radius: 15px;
+    background: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #465362;
+    color: white;
+}
+
+input, button {
+    border-radius: 10px;
 }
