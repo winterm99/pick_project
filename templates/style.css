@@ -38,8 +38,6 @@ body {
     color: white;
 }
 
-
-
 main {
     display: flex;
     flex-direction: column;
@@ -54,7 +52,8 @@ form {
     gap: 20px;
 
     width: 320px;
-    padding: 20px;   /* gleichmäßig oben, rechts, unten, links */
+    padding: 20px;
+    /* gleichmäßig oben, rechts, unten, links */
 
     border: 2px solid #465362;
     border-radius: 15px;
@@ -108,6 +107,7 @@ button:hover {
     color: white;
 }
 
-input, button {
+input,
+button {
     border-radius: 10px;
 }
