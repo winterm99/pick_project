@@ -40,3 +40,7 @@ def poll(code):
         return "Poll not found"
 
     return render_template("poll.html", poll=poll, code=code)
+
+if __name__ == "__main__":
+    print("Starte Server...")
+    app.run(debug=True)
