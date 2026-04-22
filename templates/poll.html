@@ -1,0 +1,20 @@
+<h1>{{ poll.question }}</h1>
+
+<p>Code: {{ code }}</p>
+
+<form method="post" action="/vote/{{ code }}">
+    {% for answer in poll.answers %}
+        <button type="submit" name="vote" value="{{ loop.index0 }}">
+            {{ answer }}
+        </button><br><br>
+    {% endfor %}
+</form>
+
+<h2>Results:</h2>
+<ul>
+    {% for i in range(poll.answers|length) %}
+        <li>{{ poll.answers[i] }} - {{ poll.votes[i] }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/">Back</a>
