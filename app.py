@@ -41,6 +41,13 @@ def poll(code):
 
     return render_template("poll.html", poll=poll, code=code)
 
+@app.route("/joinpoll")
+def joinpoll():
+    return render_template("joinpoll.html")
+
+@app.route("/help")
+def help():
+    return render_template("help.html")
+
 if __name__ == "__main__":
-    print("Starte Server...")
     app.run(debug=True)
