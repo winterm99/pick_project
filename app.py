@@ -45,6 +45,19 @@ def poll(code):
 def joinpoll():
     return render_template("joinpoll.html")
 
+@app.route("/join", methods=["POST"])
+def join():
+    code = request.form.get("code").upper()
+
+    if code not in polls:
+        return "Invalid code"
+
+    
+    return render_template("choose.html")
+
+
+
+
 @app.route("/help")
 def help():
     return render_template("help.html")

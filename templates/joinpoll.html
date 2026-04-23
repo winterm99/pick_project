@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
-	<meta charset="UTF-8" />
-	<title>joinpoll</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-	<script src="{{ url_for('static', filename='script.js') }}"></script>
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<title>joinpoll</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<script src="{{ url_for('static', filename='script.js') }}"></script>
+	</head>
 
-<body>
-	<header>
-		<div id="Logo">
-			<img src="static\Icons\pickrLogo.svg">
-		</div>
-	</header>
-	<main>
-		<form id="joinForm">
-			<div class="field">
-				<label for="code">Join</label>
-				<input type="text" id="code" name="code" placeholder="Enter code..." required>
+	<body>
+		<header>
+			<div id="Logo">
+				<img src="{{ url_for('static', filename='Icons/pickrLogo.svg') }}">
 			</div>
+		</header>
 
-			<button type="submit">Joinen</button>
-		</form>
-		<div class="buttons">
-			<a href="{{ url_for('index') }}">Back</a>
-		</div>
-	</main>
-	<footer>
-		<div class="footer-line">TH Augsburg · Studienprojekt · Webtechnologien / Agile Webanwendungen für Python</div>
-		<div class="footer-line">Mario Winter · Alfred Rose · © 2026</div>
-	</footer>
-</body>
+		
+		<main>
+			<form id="joinForm" action="/join" method="post">
+				<div class="field">
+					<label for="code">Join</label>
+					<input type="text" id="code" name="code" placeholder="Enter code..." required>
+				</div>
+
+				<button type="submit">Joinen</button>
+			</form>
+			<div class="buttons">
+				<a href="{{ url_for('index') }}">Back</a>
+			</div>
+		</main>
+
+
+		<footer>
+			<div class="footer-line">TH Augsburg · Studienprojekt · Webtechnologien / Agile Webanwendungen für Python</div>
+			<div class="footer-line">Mario Winter · Alfred Rose · © 2026</div>
+		</footer>
+	</body>
 
 
 

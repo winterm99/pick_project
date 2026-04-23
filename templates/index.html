@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
-	<meta charset="UTF-8" />
-	<title>index</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-	<script src="{{ url_for('static', filename='script.js') }}"></script>
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<title>index</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<script src="{{ url_for('static', filename='script.js') }}"></script>
+	</head>
 
-<body>
-	<header>
-		<div id="Logo">
-			<img src="{{ url_for('static', filename='Icons/pickrLogo.svg') }}">
-		</div>
-	</header>
+	<body>
+		<header>
+			<div id="Logo">
+				<img src="{{ url_for('static', filename='Icons/pickrLogo.svg') }}">
+			</div>
+		</header>
 
-	<main>
+		<main>
 
-		<div class="buttons">
-			<a href="/create">Start new poll</a>
-		</div>
-
-
-		<div class="buttons">
-			<a href="/joinpoll">Join a poll</a>
-		</div>
+			<div class="buttons">
+				<a href="/create">Start new poll</a>
+			</div>
 
 
-		<div class="buttons">
-			<a href="/help">Help</a>
-		</div>
+			<div class="buttons">
+				<a href="/joinpoll">Join a poll</a>
+			</div>
 
-	</main>
 
-	<footer>
-		<div class="footer-line">TH Augsburg · Studienprojekt · Webtechnologien / Agile Webanwendungen für Python</div>
-		<div class="footer-line">Mario Winter · Alfred Rose · © 2026</div>
-	</footer>
+			<div class="buttons">
+				<a href="/help">Help</a>
+			</div>
 
-</body>
+		</main>
+
+		<footer>
+			<div class="footer-line">TH Augsburg · Studienprojekt · Webtechnologien / Agile Webanwendungen für Python</div>
+			<div class="footer-line">Mario Winter · Alfred Rose · © 2026</div>
+		</footer>
+
+	</body>
 
 </html>
