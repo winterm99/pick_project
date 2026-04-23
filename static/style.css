@@ -10,7 +10,6 @@ body {
 }
 
 #Logo {
-
     display: flex;
     justify-content: center;
     margin: 2%;
@@ -63,6 +62,7 @@ form {
 
     align-items: stretch;
     margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .field {
@@ -124,6 +124,7 @@ footer {
     color: rgba(0, 0, 0, 0.5);
 
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-line {
@@ -141,4 +142,9 @@ footer {
     border-radius: 15px;
 
     text-align: left;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+button{
+    background-color: #DBCDC6;
 }
