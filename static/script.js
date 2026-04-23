@@ -67,3 +67,5 @@ function renumberAnswers() {
 
     count = options.length;
 }
+
+

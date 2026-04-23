@@ -10,11 +10,11 @@
 
 <body>
     <header>
-        <div id="Logo">
-            <img src="static\Icons\pickrLogo.svg">
-        </div>
-    </header>
-
+			<div id="Logo">
+				<img src="{{ url_for('static', filename='Icons/pickrLogo.svg') }}">
+			</div>
+	</header>
+    
     <main>
         <form action="/create" method="post">
 
@@ -50,13 +50,16 @@
 
         </form>
 
-        <div class="buttons">
+        
             
-            <div>
+           
 
-                <div class="buttons">
-                    <a href="{{ url_for('index') }}">Back</a>
-                </div>
+        <div class="buttons">
+            <a href="{{ url_for('index') }}">Back</a>
+        </div>
+        
+            
+        
 
     </main>
 
