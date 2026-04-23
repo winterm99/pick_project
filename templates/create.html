@@ -45,13 +45,15 @@
             </div>
 
             <button type="button" onclick="addAnswer()">➕ add Answer</button>
+            
+            <button type="submit">Start poll</button>
 
         </form>
 
         <!--Ab hier bis Zeile 55 ists Buggy, check aber nicht wie man fixt. wenn zbs <a href="/">Back</a> schreibst, gehts wieder-->
 
         <div class="buttons">
-            <a href="{{ url_for('poll') }}">Start Poll</a>
+            
             <div>
 
                 <div class="buttons">
