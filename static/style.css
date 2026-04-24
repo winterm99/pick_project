@@ -148,3 +148,40 @@ footer {
 button{
     background-color: #DBCDC6;
 }
+
+
+/*Resultate anzeigen Balkendiagramm */
+
+.results {
+    width: 60%;
+    margin: auto;
+}
+
+.result-item {
+    margin-bottom: 20px;
+}
+
+.result-text {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.percent {
+    margin-top: 5px;
+    font-size: 14px;
+}

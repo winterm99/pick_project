@@ -18,19 +18,34 @@
         
     
         <main>
+            <p>Code: {{ code }}</p>
             <p>{{ poll.question }}</p>
 
-            <p>Code: {{ code }}</p>
+            {% set total = poll.votes | sum %}
 
-            <p>Results:</p>
-
-            <ul>
+            <div class="results">
                 {% for i in range(poll.answers|length) %}
-                    <li>{{ poll.answers[i] }} - {{ poll.votes[i] }}</li>
+                    <div class="result-item">
+                        <div class="result-text">
+                            {{ poll.answers[i] }} — {{ poll.votes[i] }} votes
+                        </div>
+
+                        {% set percent = (poll.votes[i] / total * 100) if total > 0 else 0 %}
+
+                        <div class="bar-container">
+                            <div class="bar" style="width: {{ percent }}%"></div>
+                        </div>
+
+                        <div class="percent">
+                            {{ percent | round(1) }}%
+                        </div>
+                    </div>
                 {% endfor %}
-            </ul>
+            </div>
 
-
+            
+            <a href="/choose/{{ code }}">Vote</a>
+            
             <div class="buttons">
                 <a href="{{ url_for('index') }}">Back</a>
             </div>

@@ -22,6 +22,15 @@
 
             <!--Wie bauen wir jetzt die möglichen antworten ein?-->
 
+			
+			<form method="post" action="/vote/{{ code }}">
+    			{% for answer in poll.answers %}
+       			 	<button type="submit" name="vote" value="{{ loop.index0 }}">
+           		 	{{ answer }}
+        			</button>
+        			<br><br>
+    			{% endfor %}
+			</form>
 
 
 

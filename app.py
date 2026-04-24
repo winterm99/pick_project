@@ -81,6 +81,25 @@ def choose(code):
 
     return render_template("choose.html", poll=poll, code=code)
 
+@app.route("/vote/<code>", methods=["POST"])
+def vote(code):
+    poll = polls.get(code)
+
+    if not poll:
+        return "Poll not found"
+
+    choice = request.form.get("vote")
+
+    if choice is None:
+        return "No option selected"
+
+    choice = int(choice)
+    poll["votes"][choice] += 1
+
+    return redirect(f"/poll/{code}")
+
+
+import os
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=10000)

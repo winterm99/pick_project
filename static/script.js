@@ -35,7 +35,7 @@ function addAnswer() {
     renumberAnswers();
 }
 
-function removeAnswer(optionDiv) {
+function removeAnswer(button) {
     const container = document.querySelector(".answers");
 
     if (container.children.length <= 2) {
@@ -43,7 +43,9 @@ function removeAnswer(optionDiv) {
         return;
     }
 
+    const optionDiv = button.closest(".option"); // 🔥 wichtig
     optionDiv.remove();
+
     renumberAnswers();
 }
 
