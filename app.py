@@ -8,6 +8,7 @@ import os
 
 app = Flask(__name__)
 
+#Speicher
 polls = {}
 
 
