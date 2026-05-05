@@ -14,10 +14,15 @@ body {
     justify-content: center;
     margin: 2%;
 }
+#Logo img {
+    max-width: 80%; 
+    height: auto;
+}
 
 .buttons {
-    width: 250px;
+    width: 90%;
     margin: 10px auto;
+    max-width: 300px;
 }
 
 .buttons a {
@@ -117,10 +122,10 @@ button {
 
 footer {
     margin-top: auto;
-    padding: 12px 20px;
+    padding: 15px 10px;
     text-align: center;
 
-    font-size: 12px;
+    font-size: 10px;
     color: rgba(0, 0, 0, 0.5);
 
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -133,7 +138,7 @@ footer {
 
 .help-box {
     width: 600px;
-    max-width: 90%;
+    max-width: 600px;
 
     padding: 20px;
     margin: 20px auto;
@@ -149,12 +154,20 @@ button{
     background-color: #DBCDC6;
 }
 
+form, .help-box {
+    width: 90%; /* Nutzt 90% des Bildschirms auf Handys */
+    max-width: 400px; /* Wird auf Desktop nicht breiter als 400px */
+    margin: 20px auto;
+    box-sizing: border-box; /* Wichtig, damit Padding die Breite nicht sprengt */
+}
+
 
 /*Resultate anzeigen Balkendiagramm */
 
 .results {
-    width: 60%;
+    width: 90%;
     margin: auto;
+    max-width: 500px;
 }
 
 .result-item {
