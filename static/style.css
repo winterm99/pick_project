@@ -186,44 +186,40 @@ button{
     font-size: 14px;
 }
 
-/* --- MOBILE OPTIMIERUNG --- */
 @media screen and (max-width: 768px) {
-    
-    /* 1. Die Help-Box ist aktuell 600px breit - das sprengt jedes Handy */
-    .help-box {
-        width: 90%; /* Nutzt 90% der Bildschirmbreite */
-        max-width: none; 
-        font-size: 14px; /* Text etwas kleiner für Handys */
+    /* 1. Alles etwas schlanker machen */
+    form, .help-box, .results {
+        width: 88%; /* Etwas mehr Luft zu den Seitenrändern */
+        padding: 15px; /* Weniger "Speck" im Inneren */
+        border-width: 1px; /* Dünnere Rahmen wirken auf Handys edler */
+        border-radius: 10px; /* Kleinere Rundungen passen besser zum kleinen Screen */
+        gap: 15px; /* Weniger Abstand zwischen den Feldern */
     }
 
-    /* 2. Formulare (Create & Join) flexibel machen */
-    form {
-        width: 90%; /* Statt fester 320px */
-        padding: 15px; /* Etwas weniger Platzverschwendung am Rand */
-    }
-
-    /* 3. Buttons (Start Poll, Join, etc.) */
+    /* 2. Buttons weniger massiv */
     .buttons {
-        width: 80%; /* Buttons nehmen mehr Platz ein als auf Desktop */
-    }
-
-    /* 4. Die Resultate (Balkendiagramm) */
-    .results {
-        width: 95%; /* Fast volle Breite für bessere Lesbarkeit */
-    }
-
-    /* 5. Option-Rows in 'create.html' */
-    /* Wenn der Input und das X nebeneinander zu eng werden: */
-    .option-row {
-        gap: 5px;
+        width: 75%;
     }
     
-    input {
-        font-size: 16px; /* Verhindert, dass iOS beim Tippen automatisch zoomt */
+    .buttons a, button {
+        padding: 10px; /* Flachere Buttons */
+        border-width: 1px;
+        font-size: 15px;
     }
 
-    /* 6. Footer-Text anpassen */
-    footer {
-        font-size: 10px;
+    /* 3. Text und Abstände im Header */
+    #Logo {
+        margin: 5% 0; /* Weniger Platz verschwenden oben */
+    }
+
+    /* 4. Die Eingabefelder (Inputs) */
+    input {
+        padding: 10px;
+        font-size: 16px; /* Wichtig: verhindert den iPhone-Auto-Zoom */
+    }
+
+    /* 5. Die Ergebnis-Balken (Poll) */
+    .bar-container {
+        height: 15px; /* Schmalere Balken sehen auf dem Handy besser aus */
     }
 }
