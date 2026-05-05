@@ -185,3 +185,45 @@ button{
     margin-top: 5px;
     font-size: 14px;
 }
+
+/* --- MOBILE OPTIMIERUNG --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Die Help-Box ist aktuell 600px breit - das sprengt jedes Handy */
+    .help-box {
+        width: 90%; /* Nutzt 90% der Bildschirmbreite */
+        max-width: none; 
+        font-size: 14px; /* Text etwas kleiner für Handys */
+    }
+
+    /* 2. Formulare (Create & Join) flexibel machen */
+    form {
+        width: 90%; /* Statt fester 320px */
+        padding: 15px; /* Etwas weniger Platzverschwendung am Rand */
+    }
+
+    /* 3. Buttons (Start Poll, Join, etc.) */
+    .buttons {
+        width: 80%; /* Buttons nehmen mehr Platz ein als auf Desktop */
+    }
+
+    /* 4. Die Resultate (Balkendiagramm) */
+    .results {
+        width: 95%; /* Fast volle Breite für bessere Lesbarkeit */
+    }
+
+    /* 5. Option-Rows in 'create.html' */
+    /* Wenn der Input und das X nebeneinander zu eng werden: */
+    .option-row {
+        gap: 5px;
+    }
+    
+    input {
+        font-size: 16px; /* Verhindert, dass iOS beim Tippen automatisch zoomt */
+    }
+
+    /* 6. Footer-Text anpassen */
+    footer {
+        font-size: 10px;
+    }
+}
